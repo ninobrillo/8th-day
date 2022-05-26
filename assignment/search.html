@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>ECOMMERCE WEBSITE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #content .card {
+            float: left;
+            width: 20rem;
+            text-align: center;
+            height: 30rem;
+            margin: 1%;
+        }
+
+            #content .card p {
+                color: white;
+            }
+
+            #content .card img {
+                height: 80%;
+            }
+
+
+        .ribbon {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            z-index: 1;
+            overflow: hidden;
+            width: 93px;
+            height: 93px;
+            text-align: right;
+        }
+
+            .ribbon span {
+                font-size: 0.8rem;
+                color: black;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: bold;
+                line-height: 32px;
+                transform: rotate(45deg);
+                width: 125px;
+                display: block;
+                background: #79a70a;
+                background: yellow;
+                box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 17px;
+            }
+
+                .ribbon span::before {
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    top: 100%;
+                    z-index: -1;
+                    border-left: 3px solid #79A70A;
+                    border-right: 3px solid transparent;
+                    border-bottom: 3px solid transparent;
+                    border-top: 3px solid #79A70A;
+                }
+
+                .ribbon span::after {
+                    content: '';
+                    position: absolute;
+                    right: 0%;
+                    top: 100%;
+                    z-index: -1;
+                    border-right: 3px solid #79A70A;
+                    border-left: 3px solid transparent;
+                    border-bottom: 3px solid transparent;
+                    border-top: 3px solid #79A70A;
+                }
+
+        #footer ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0px;
+            text-align: left;
+        }
+
+            #footer ul li img {
+                width: 30px;
+                height: 30px;
+                filter: grayscale(100%);
+                float: left;
+                margin: 0px 6px;
+            }
+
+        #footer {
+            filter: invert(100%);
+            font-size: 13px;
+            clear: both;
+        }
+
+        .sub-menu1 {
+            /*display:none;*/
+        }
+
+            .sub-menu1 ul li {
+                list-style-type: none;
+            }
+
+        .header #icons #sign:hover .sub-menu1 ul li {
+            display: block !important;
+        }
+
+        #navbarNavDarkDropdown:hover .dropdown-menu-dark {
+            display: block;
+        }
+
+        #navbarNavDarkDropdown img {
+            width: 75%;
+            margin-left: 100%;
+            padding: 0px;
+            filter: invert(100%);
+        }
+
+        .dropdown-menu-dark {
+            background-color: black;
+        }
+
+        #logo img {
+            width: 100%;
+            filter: invert(100%);
+        }
+
+        .navbar {
+            background-color: black;
+        }
+        #content {
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 pt-1" id="logo">
+                    <a href="home.html"><img src="logo.png" /></a>
+                </div>
+                <div class="col-6">
+                    <div class="row pt-1">
+                        <div class="col-11">
+                            <input class="form-control" type="text" placeholder="search items here..." />
+                        </div>
+                        <div class="col-1 pt-1">
+                            <a href="search.html"><img src="./icons/search.png" alt="search" class="w-100" style="filter: invert(100%)" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="./icons/sign.png" />
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Log in</a></li>
+                                            <li><a class="dropdown-item" href="#">Sign up</a></li>
+                                            <li><a class="dropdown-item" href="#">Help</a></li>
+                                            <li><a class="dropdown-item" href="#">Track order</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="./icons/fav.png" />
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">No favorites</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="./icons/cart.png" />
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">No item(s) on cart</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container py-1">
+            <h3>8 items found:</h3>
+
+            <div class="container" id="content">
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>50% off!</span></div>
+                    <img src="./img/others1.jpg" alt="One Piece">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱19,999 </s> ₱9,999
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9733
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>30% off!</span></div>
+                    <img src="./img/others2.jpg" alt="Naruto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱3,599</s> ₱2,519
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9734
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>30% off!</span></div>
+                    <img src="./img/others3.jpg" alt="Attack on Titans">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱16,999</s> ₱11,899
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9733
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>50% off!</span></div>
+                    <img src="./img/others4.png" alt="One Piece">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱19,999 </s> ₱9,999
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9733
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>30% off!</span></div>
+                    <img src="./img/others5.jpg" alt="Naruto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱3,599</s> ₱2,519
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9734
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>30% off!</span></div>
+                    <img src="./img/others6.jpg" alt="Attack on Titans">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱16,999</s> ₱11,899
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9733
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>50% off!</span></div>
+                    <img src="./img/others7.jpg" alt="One Piece">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱19,999 </s> ₱9,999
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9733
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+                <div class="card bg-dark">
+                    <div class="ribbon"><span>30% off!</span></div>
+                    <img src="./img/others8.jpg" alt="Naruto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="price">
+                        <s>₱3,599</s> ₱2,519
+                        <div style="color:yellow">
+                            &#9733;&#9733;&#9733;&#9733;&#9734
+                        </div>
+                    </p>
+                    <p><button trype="button" class="btn btn-light">Add to Cart</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-flex bg-light" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 py-1 text-muted">
+                    <div class="row" style="font-weight: bold; color: black !important">CONTACT US</div>
+                    <div class="row">BRILLO.NINO@GMAIL.COM</div>
+                    <div class="row">FB.COM/NINOBRILLO</div>
+                    <div class="row">1-800-0000</div>
+                </div>
+                <div class="col-4 py-1 text-muted">
+                    <div class="row" style="font-weight: bold; color: black !important ">ABOUT US</div>
+                    <div class="row">Career</div>
+                    <div class="row">Terms & Conditions</div>
+                    <div class="row">Privacy Policy</div>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col"><strong>FIND US ON :</strong></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li><img src="./icons/fb.png" /></li>
+                                <li><img src="./icons/google.png" /></li>
+                                <li><img src="./icons/twitter.png" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li><img src="./icons/ig.png" /></li>
+                                <li><img src="./icons/yt.png" /></li>
+                                <li><img src="./icons/in.png" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 text-muted">
+                    <div class="row">Any question? Let us help you.</div>
+                    <div class="row">Contact  |   Help</div>
+                </div>
+
+                <div class="col text-muted">
+                    <div class="row">About  |   Privacy  |   Terms of Service</div>
+                    <div class="row">© 2012, 2022 Hokage store</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

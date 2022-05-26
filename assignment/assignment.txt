@@ -1,0 +1,6 @@
+1.) home page
+2.) product/category page
+3.) adds page
+4.) search page
+
+pages interacting each other
